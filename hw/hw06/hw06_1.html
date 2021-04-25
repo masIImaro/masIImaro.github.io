@@ -1,0 +1,66 @@
+<!-- 
+    title   : 아우터
+    Date    : 2021-04-25
+    Comment :  
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTP-8">
+        <title>YJMall</title>
+        <link type="text/css" rel="stylesheet" href="./hw06.css">
+        <script>
+            function search(){
+                var name = document.getElementById("searchname").value;
+                switch (name){
+                    case '아우터':
+                        location.href="./hw06_1.html";
+                        break;
+                    case '상의':
+                        location.href="./hw06_2.html";
+                        break;
+                    case '원피스':
+                        location.href="./hw06_3.html";
+                        break;
+                    case '하의':
+                        location.href="./hw06_4.html";
+                        break;
+                    case '신발':
+                        location.href="./hw06_5.html";
+                        break;
+                    default:
+                        document.getElementById("main_frame").src=`https://search.shopping.naver.com/search/all?query=${name}`;
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="head">
+            <a href="./../hw07/hw07.html"><p class="h1">YJMall</p></a>
+            <center>
+                <div class="h2">
+                    <input type="text" name="name" id='searchname' placeholder="검색어를 입력하세요">
+                    <button onClick="search()">검색</button>
+                </div>
+                <div class="menu">
+                    <br>
+                        <a class="list2" href="./hw06_1.html">아우터</a>
+                        <a class="list1" href="./hw06_2.html">상의</a>
+                        <a class="list1" href="./hw06_3.html">원피스</a>
+                        <a class="list1" href="./hw06_4.html">하의</a>
+                        <a class="list1" href="./hw06_5.html">신발</a>
+                </div>
+            </center>
+        </div>
+        <br>
+        <center>
+            <iframe src="https://search.shopping.naver.com/search/all?query=아우터" 
+            id="main_frame" height=570vh; width=80%;></iframe>
+        </center>
+    </body>
+    <footer>
+
+    </footer>
+</html>
